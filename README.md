@@ -1,6 +1,6 @@
 # 📚 Intro to algoritms
 
-Хранилище с решения, бележки и материали от курса **Увод в Алгоритмите**.
+A repository containing solutions, notes, and materials from the **Introduction to Algorithms** course.
 
 ---
 
@@ -11,9 +11,9 @@
 │   ├── 
 │   ├── 
 │   └── 
-├── 02-търсене/
+├── 02-Searching
 │   
-│   └── linear_search.py
+│   └── linear_search.cpp
 ├── 
 ├──
 └── README.md
