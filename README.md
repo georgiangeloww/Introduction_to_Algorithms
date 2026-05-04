@@ -1,4 +1,4 @@
-# 📚 Intro to algoritms
+# 📚 Intro to algorithms
 
 A repository containing solutions, notes, and materials from the **Introduction to Algorithms** course.
 
