@@ -1,31 +1,42 @@
 #include <iostream>
-using std::cout;
-using std::cin;
 
 int main() {
-    const int MAX_S = 100;
-    char x;
-    int i = 0;
-    int proverka = 0;
-    char name[MAX_S];
+
+    std::cout << "Въведете броя на символите в масива: ";
+    int n;
+    std::cin >> n;
     
-    cout << "Въведи име: ";
+    std::cout << "Въведи име: ";
+    char* name = new char[n + 1];
     std::cin >> name;
     
-    cout << "Въведи буква: ";
+    std::cout << "Въведи буква: ";
+    char x;
     std::cin >> x;
 
-    while (name[i] != '\0') {
+    name[n] = x;
+    
+    int proverka = 0;
+    int i = 0;
+    while (name[i] != x) {
         proverka = proverka + 1;
-        if(name[i] == x) {
-            cout << "Буква " << name[i] << " е намерена на позиция " << i + 1 << std::endl;
-        }
         i = i + 1;
     }
-    std::cout << "Извършени проверке: ";
-    std::cout << proverka;
+    proverka++;
 
+    if (i < n) {
+        std::cout << "Буква " << name[i] << " е намерена на позиция " << i + 1 << std::endl;
+    }
+    else {
+        std::cout << "Буква " << name[i] << " не е намерена!" << std::endl;   
+    }
 
+    std::cout << "Извършени проверки: " << proverka;
+
+    if(name != nullptr) {
+        delete[] name; 
+        name = nullptr;
+    }
 
     return 0;
 }
