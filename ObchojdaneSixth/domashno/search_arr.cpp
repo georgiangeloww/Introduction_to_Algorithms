@@ -3,29 +3,23 @@ using std::cin;
 
 int main(){
     int arr[6];
-    int proverki = 0;
-    bool isFound = 0;
-
+    
     for(int i = 0; i < 6; i++){
         cin >> arr[i];
     }
-
-    for (int i = 1; i < 5; i++) {
-        isFound = 0;
-        for (int j = 0; j < 6; j++) {
-            proverki = proverki + 1;
-            if (!isFound) {
-                if (arr[j] == i) {
-                    std::cout << "Намерих " << i << " във факултетния номер!" << std::endl;
-                    isFound = 1;
-                }
-            }
+    
+    int x;
+    cin >> x;
+    int proverki = 0;
+    for (int i = 0; i < 6; i++) {
+        proverki = proverki + 1;
+        if (arr[i] == x) {
+            std::cout << "Намерих " << x << " във факултетния номер!" << std::endl;
         }
     }
+    
     std::cout << "Общо извършени проверки: ";
     std::cout << proverki;
-
-
 
     return 0;
 }
